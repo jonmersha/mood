@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.gebeya_mood">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/gebeya_logo"
+        android:label="@string/app_name"
+        android:name="App"
+        android:roundIcon="@drawable/gebeya_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".views.OAuthActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".views.GebeyaIntro"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".views.TeamDetailActivity" />
+        <activity android:name=".views.MoodSubmitActivity" />
+        <activity
+            android:name=".views.UserMoodsActivity"
+            android:label="@string/title_activity_my_moods" />
+        <activity
+            android:name=".views.GebeyaAllTeamMoodsActivity"
+            android:label="@string/title_activity_home" />
+        <activity
+            android:name=".views.AdminActivity"
+            android:label="@string/admin_title" />
+        <activity android:name=".views.LoginActivity" />
+        <activity
+            android:name=".views.MoodPromptActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".views.SignUpActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

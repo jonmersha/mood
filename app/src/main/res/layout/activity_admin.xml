@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.AdminActivity"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:padding="1dp"
+            android:elevation="18dp"
+            tools:ignore="MissingConstraints"
+            android:background="@color/colorFrontAccent">
+
+            <TextView
+                android:id="@+id/adminName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center|left"
+                android:text="User Name"
+                android:textSize="16dp"
+                android:layout_marginLeft="9dp"
+                android:textColor="@color/colorPrimary"
+                tools:layout_editor_absoluteX="123dp"
+                tools:layout_editor_absoluteY="258dp"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:orientation="horizontal"
+            android:scrollbars="vertical"
+            android:showDividers="end"
+            android:soundEffectsEnabled="true"
+            android:background="@color/colorBackgroundLight"
+            android:elevation="16dp"
+            >
+
+
+            <ImageView
+                android:id="@+id/dateIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="3dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_date_range" />
+
+            <Spinner
+                android:id="@+id/mood_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"
+                android:layout_gravity="center_vertical"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/teamIcom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29dp"
+                android:layout_marginRight="3dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_supervised_user_circle" />
+
+            <Spinner
+                android:id="@+id/team_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:text="All"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="3dp"
+            android:elevation="9dp"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/adminRecycler"
+                android:paddingTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:elevation="9dp"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
