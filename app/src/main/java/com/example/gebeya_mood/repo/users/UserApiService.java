@@ -1,9 +1,11 @@
 package com.example.gebeya_mood.repo.users;
 
 import com.example.gebeya_mood.models.User;
+import com.example.gebeya_mood.pojos.CreateUserResponse;
 import com.example.gebeya_mood.pojos.LoginPojo;
 import com.example.gebeya_mood.pojos.SingUpPojo;
 import com.example.gebeya_mood.pojos.UserProfilePojo;
+import com.google.gson.JsonObject;
 
 import java.util.List;
 
@@ -27,6 +29,11 @@ public interface UserApiService {
             @Field("type")String type,
             @Field("sex")String sex
     );*/
+
+   //================================Send Json object instead of user object============
+
+   @POST("users")
+   Call<CreateUserResponse> createUser(@Body JsonObject object);
 
     @FormUrlEncoded
     @POST("users/login")
